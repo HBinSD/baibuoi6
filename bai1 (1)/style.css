@@ -19,13 +19,15 @@ body {
 }
 
 .sidebar {
-    width: 110px;
+    width: 100px;
     background: #f0e7ff;
     display: block;
     flex-direction: column;
     overflow: auto;
     max-height: 100vh;
     margin-right: 10px;
+    position: sticky;
+    padding: 10px;
 }
 
 .sidebar ul {
@@ -41,9 +43,10 @@ body {
     text-align: center;
     font-size: 14px;
     font-family: google sans, sans-serif;
-    margin: 0px 5px 20px 0px;
+    margin: 0px 0px 20px 0px;
     border-radius: 5px;
     padding-bottom: 5px;
+    line-height: 30px;
 }
 
 #home {
@@ -71,19 +74,20 @@ body {
     padding: 0px;
     margin-left: 10px;
     width: 85%;
+
 }
 
 .hero {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
     background: #f8f5fc;
     border-radius: 12px;
 }
 
 .text {
-    height: 730px;
-    height: 640px;
+    width: 500px;
 }
 
 .text h1 {
@@ -161,11 +165,30 @@ button:hover {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 2 cột */
     gap: 16px;
+    margin-bottom: 20px;
 }
+
+.quay-lai {
+    text-align: center;
+}
+
+.quay-lai a {
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    background-color: pink;
+    padding: 12px 12px;
+    border-radius: 10px;
+}
+
 @media (max-width: 768px) {
     .container {
         flex-direction: column; 
         align-items: center;
+
+    }
+    .sidebar {
+        display: none;
     }
 
     .card {
